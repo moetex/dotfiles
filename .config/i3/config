@@ -132,3 +132,6 @@ bar {
 
 gaps inner 6
 gaps outer 4
+# Mouse Pad
+exec --no-startup-id xinput set-prop 13 "libinput Natural Scrolling Enabled" 1
+exec --no-startup-id xinput set-prop 13 "libinput Tapping Enabled" 1

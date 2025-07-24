@@ -106,14 +106,26 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
-	# status_command i3blocks
-	status_command ~/.local/bin/bumblebee-status -m \
-	brightness cpu memory battery pasink pasource datetime -p \
-	time.format="%H:%M" -t default #onedark-powerline
-}
+  font pango:Terminess Nerd Font Bold 16
+  position bottom
+  status_command bumblebee-status \
+  -m spotify cpu2 memory battery pasink pasource time dunstctl \
+  -p cpu2.layout="cpu2.cpuload cpu2.coresload" \
+  -p memory.format='{used}/{total}' \
+  -p time.enabled=false 'time.format=%B %d %H:%M' \
+  -t iceberg-contrast
 
-default_border pixel 1
-default_floating_border pixel 20
+  colors {
+    background #00000000
+    
+    focused_workspace  #fe0202 #000000 #fffefe
+    active_workspace   #6272a4 #44475a #fffefe
+    inactive_workspace #6272a4 #2e3455 #fffefe
+    urgent_workspace   #6272a4 #f70505 #fffefe
+  }
+
+
+}
 
 gaps inner 6
 gaps outer 4

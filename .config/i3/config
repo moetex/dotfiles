@@ -105,6 +105,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+bindsym Print exec flameshot gui
+bindsym Shift+Print exec --no-startup-id sh -c 'mkdir -p ~/Pictures/Screenshots && flameshot full -p ~/Pictures/Screenshots'
+
 bar {
   font pango:Terminess Nerd Font Bold 16
   position bottom

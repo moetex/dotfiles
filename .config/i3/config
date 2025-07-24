@@ -4,7 +4,7 @@ floating_modifier $mod
 exec_always --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/10.png
 exec_always --no-startup-id picom
 
-font pango:IBM Plex Mono 16
+font pango:Cascadia Mono 14
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -132,6 +132,16 @@ bar {
 
 gaps inner 6
 gaps outer 4
+
+
+for_window [class=".*"] border pixel 0
+
+default_border pixel 0
+default_floating_border pixel 0
+
+hide_edge_borders smart
+
+
 # Mouse Pad
 exec --no-startup-id xinput set-prop 13 "libinput Natural Scrolling Enabled" 1
 exec --no-startup-id xinput set-prop 13 "libinput Tapping Enabled" 1
